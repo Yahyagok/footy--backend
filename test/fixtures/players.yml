@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  number: 1
+  type: 
+  country: MyString
+  age: 1
+  game: 1
+  club: 1
+
+two:
+  name: MyString
+  number: 1
+  type: 
+  country: MyString
+  age: 1
+  game: 1
+  club: 1

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 1
+  status: MyString
+  stadium: MyString
+  goalscorer: MyString
+  cards: MyString
+  substutions: MyString
+  lineup: MyString
+
+two:
+  date: 1
+  status: MyString
+  stadium: MyString
+  goalscorer: MyString
+  cards: MyString
+  substutions: MyString
+  lineup: MyString
