@@ -4,5 +4,5 @@ class UserSerializer < ActiveModel::Serializer
   has_many :likes
   has_many :players, through: :likes
   belongs_to :club
-  attributes :name, :password, :club, :reviews, :players, :likes
+  attributes :name, :password, :club_id, :reviews, :players, :likes, :id
 end

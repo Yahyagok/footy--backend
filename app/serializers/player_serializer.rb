@@ -1,5 +1,5 @@
 class PlayerSerializer < ActiveModel::Serializer
   belongs_to :club
   belongs_to :match
-  attributes :club, :match, :name, :number, :type, :country, :age
+  attributes  :name, :number, :kind, :country, :age, :id, :club_id, :match_id
 end

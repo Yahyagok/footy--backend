@@ -18,14 +18,13 @@ ActiveRecord::Schema.define(version: 2020_07_12_185735) do
   create_table "clubs", force: :cascade do |t|
     t.string "name"
     t.string "badge"
-    t.string "coach"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "likes", force: :cascade do |t|
-    t.integer "user"
-    t.integer "player"
+    t.integer "user_id"
+    t.integer "player_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -33,12 +32,14 @@ ActiveRecord::Schema.define(version: 2020_07_12_185735) do
   create_table "matches", force: :cascade do |t|
     t.integer "date"
     t.string "status"
-    t.string "home_scorer"
-    t.string "away_scorer"
     t.string "home_team_score"
     t.string "away_team_score"
     t.string "home_team_name"
     t.string "away_team_name"
+    t.string "home_team_system"
+    t.string "away_team_system"
+    t.string "home_team_badge"
+    t.string "away_team_badge"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -46,18 +47,18 @@ ActiveRecord::Schema.define(version: 2020_07_12_185735) do
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "number"
-    t.string "type"
+    t.string "kind"
     t.string "country"
     t.integer "age"
-    t.integer "match"
-    t.integer "club"
+    t.integer "match_id"
+    t.integer "club_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "user"
-    t.integer "player"
+    t.integer "user_id"
+    t.integer "player_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -65,7 +66,7 @@ ActiveRecord::Schema.define(version: 2020_07_12_185735) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "password"
-    t.integer "club"
+    t.integer "club_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

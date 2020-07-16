@@ -3,11 +3,11 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
     create_table :players do |t|
       t.string :name
       t.integer :number
-      t.string :type
+      t.string :kind
       t.string :country
       t.integer :age
-      t.integer :match
-      t.integer :club
+      t.integer :match_id
+      t.integer :club_id
 
       t.timestamps
     end

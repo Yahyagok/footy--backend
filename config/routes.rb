@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :clubs, only: [:index, :show]
+      resources :matches, only: [:index, :show ]
+      resources :players, only: [:index, :show, :update, :create ]
+      resources :reviews, only: [:show, :update, :create]
+      resources :likes, only: [:show, :update, :create]
+      resources :user, only: [:show, :update, :create]
 
         end 
     end 
