@@ -26,9 +26,9 @@ class Api::V1::ReviewsController < ApplicationController
     end 
 
     def create 
-        review.create(review_params)
-        if review.valid? 
-            render json: review
+       review = Review.create(review_params)
+        if review.save
+            render json: ReviewSerializer.new(review), status: :accepted
           else
             render json: { errors: review.errors.full_messages }, status: :unprocessible_entity
           end 

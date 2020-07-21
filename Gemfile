@@ -45,3 +45,6 @@ gem 'active_model_serializers'
 gem 'rest-client'
 
 gem 'pry', '~> 0.10.3'
+
+
+gem 'fast_jsonapi'

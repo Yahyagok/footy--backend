@@ -5,7 +5,7 @@ class Api::V1::PlayersController < ApplicationController
     def index 
         players = Player.all
 
-        render json: players 
+        render json: PlayerSerializer.new(players)
     end 
 
     def show 
@@ -19,13 +19,19 @@ class Api::V1::PlayersController < ApplicationController
     end 
 
     def create 
-        player.create(player_params) 
-    end 
+       player = Player.create(player_params) 
+
+       if player.save 
+        render json: PlayerSerializer.new(player), status: :accepted
+       else 
+        render json: {errors: player.errors.ful_messages},  status: :unprocessible_entity
+       end
+    end
 
     private 
 
     def player_params 
-        params.reqire(:player).permit(:name, :match_id, :club_id, :number, :type, :country, :age)
+        params.require(:player).permit(:name, :match_id, :club_id, :number, :kind, :country, :age)
     end 
 
     def find_player 

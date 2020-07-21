@@ -3,7 +3,7 @@ class Api::V1::ClubsController < ApplicationController
 
     def index 
         clubs = Club.all
-        render json: clubs
+        render json: ClubSerializer.new(clubs)
     end
     
     def show 
@@ -15,7 +15,7 @@ class Api::V1::ClubsController < ApplicationController
     def update
         club.update(club_params)
         if club.save 
-            render json: club, status: :accepted
+            render json: ClubSerializer.new(club), status: :accepted
         else
             render json: { errors: club.errors.full_messages }, status: :unprocessible_entity
         end 

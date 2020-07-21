@@ -1,5 +1,7 @@
-class PlayerSerializer < ActiveModel::Serializer
-  belongs_to :club
-  belongs_to :match
-  attributes  :name, :number, :kind, :country, :age, :id, :club_id, :match_id
+class PlayerSerializer
+  include FastJsonapi::ObjectSerializer
+  belongs_to :club, dependent: :destroy
+  belongs_to :match, dependent: :destroy
+  attributes  :name, :number, :kind, :country, :age,  :club_id, :match_id
+
 end
