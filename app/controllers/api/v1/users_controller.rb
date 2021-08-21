@@ -2,6 +2,15 @@ class Api::V1::UsersController < ApplicationController
 
     before_action :find_user, only: [:update, :create]
 
+
+    def index 
+        users = User.all
+
+        render json: UserSerializer.new(users)
+    end 
+
+
+
     def show 
         render json: user 
     end 
@@ -19,7 +28,7 @@ class Api::V1::UsersController < ApplicationController
     def create 
       user = User.new(user_params)
         if user.save 
-            render json: UserSerializer.new(user), statu: :accepted
+            render json: UserSerializer.new(user), status: :accepted
           else
             render json: { errors: user.errors.full_messages }, status: :unprocessible_entity
           end 

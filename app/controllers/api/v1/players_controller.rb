@@ -14,7 +14,13 @@ class Api::V1::PlayersController < ApplicationController
     end
 
     def update 
-        player = Player.find(params[:id])
+        player.update(actor_params)
+        if player.save 
+            render json: PlayerSerializer.new(player), status: :accepted
+        else
+            render json: { errors: player.errors.full_messages }, status: :unprocessible_entity
+
+        end 
 
     end 
 

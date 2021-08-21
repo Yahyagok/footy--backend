@@ -4,7 +4,7 @@ class Api::V1::LikesController < ApplicationController
 
     def show 
         like = Like.find_by(params[:id])
-        render json: LikeSerializer.new(like)
+        render json: like
     end 
 
     def update

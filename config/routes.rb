@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :players, only: [:index, :show, :update, :create ]
       resources :reviews, only: [:show, :update, :create]
       resources :likes, only: [:show, :update, :create]
-      resources :user, only: [:show, :update, :create]
+      resources :users, only: [:index,:show, :update, :create]
 
         end 
     end 
