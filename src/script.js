@@ -172,12 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
        })
 
        function sortPlayers(allPlayers){
-       
         allPlayers.data.sort(function(a, b) {
-
           let nameA = a.attributes.name.toUpperCase(); // ignore upper and lowercase
           let nameB = b.attributes.name.toUpperCase(); // ignore upper and lowercase
-
           if (nameA < nameB) {
             return -1;
           }
