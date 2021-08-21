@@ -163,10 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    })
                 }
          })  
-
-
        let sort = document.getElementById('sort')
-
        sort.addEventListener('click', function(event){
            contentContainer.innerHTML = ''
             fetch(players)
