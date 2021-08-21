@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   const eachPlayer = document.getElementsByClassName('eachPlayer')[0]
   const buttons = document.getElementById('button_container')
   const contentContainer = document.getElementById('content-container')
@@ -93,8 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 select.name  = 'matches'
                 select.id = 'matches'
                 contentContainer.append(select)
-                matches.data.map(match => {
-                  
+                matches.data.map(match => { 
                   const matchObj = new Match(match, match.attributes)
                   matchObj.addMatch()
                        }) 

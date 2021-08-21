@@ -20,7 +20,6 @@ class Match {
         option.innerHTML =`${this.home_team_name} - Match Id: ${this.id}` 
         select.append(option)
     }
-
     getAllMatch(){
         const contentContainer = document.getElementById('content-container')
         const div = document.createElement('div')

@@ -18,5 +18,4 @@ class Player {
         contentContainer.append(div)
     }
 }
-
 Player.all = []
