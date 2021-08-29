@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h5>Player Country:${player.country}<h5>
               <h5>Player Age:${player.age} <h5>
                `
-                contentContainer.append(eachPlayer)
+               contentContainer.append(eachPlayer)
             //  const div = document.createElement('div')
                    })
                 }
@@ -170,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(allPlayers => sortPlayers(allPlayers))
        })
-
        function sortPlayers(allPlayers){
         allPlayers.data.sort(function(a, b) {
           let nameA = a.attributes.name.toUpperCase(); // ignore upper and lowercase
@@ -181,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
           if (nameA > nameB) {
             return 1;
           }
-        
           // names must be equal
           return 0;
         });
