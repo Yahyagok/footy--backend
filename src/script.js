@@ -153,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(player =>  {
               eachPlayer.innerHTML = `
               <h5>Player Name: ${player.name} </h5>
-              <h5>Player Number:   ${player.number}</h5>
-              <h5> Player Type:   ${player.kind}</h5>
+              <h5>Player Number:${player.number}</h5>
+              <h5> Player Type:${player.kind}</h5>
               <h5>Player Country:  ${player.country}<h5>
               <h5>Player Age:   ${player.age} <h5>
                `
