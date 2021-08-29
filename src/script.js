@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
               <h5>Player Name: ${player.name} </h5>
               <h5>Player Number:${player.number}</h5>
               <h5> Player Type:${player.kind}</h5>
-              <h5>Player Country:  ${player.country}<h5>
-              <h5>Player Age:   ${player.age} <h5>
+              <h5>Player Country:${player.country}<h5>
+              <h5>Player Age:${player.age} <h5>
                `
                 contentContainer.append(eachPlayer)
             //  const div = document.createElement('div')
