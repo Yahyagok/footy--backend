@@ -183,13 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
           // names must be equal
           return 0;
         });
-
-
         allPlayers.data.forEach(function(player){
           const li = document.createElement('li')
-
           li.innerHTML = player.attributes.name
-
           contentContainer.append(li)
         })
 
